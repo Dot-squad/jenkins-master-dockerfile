@@ -23,5 +23,7 @@ Content-Type: text/x-shellscript; charset="us-ascii"
 #!/bin/bash
 # Set any ECS agent configuration options
 echo "ECS_CLUSTER=<Cluster_name>" >> /etc/ecs/ecs.config
+# Provide access to the Docker socket from the containers (DooD)
+chmod o+rw /var/run/docker.sock
 
 --==BOUNDARY==--
